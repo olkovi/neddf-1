@@ -22,7 +22,9 @@ RUN apt update && \
     ssh \
     openssh-client \
     libgl1-mesa-dev \
-    python${PYTHON_VERSION} python3-pip python-is-python3
+    python${PYTHON_VERSION} python3-pip python-is-python3 \
+	pip install --upgrade urllib3 requests \
+	poetry update hydra-core
     
 # Following is needed to swtich default python3 version
 # For detail, please check following link https://unix.stackexchange.com/questions/410579/change-the-python3-default-version-in-ubuntu
